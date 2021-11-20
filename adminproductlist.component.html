@@ -1,0 +1,42 @@
+<h1 style="text-align: center;color:rgb(252, 4, 4);font-size: xx-large;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Welcome</h1>
+<ul class="nav flex-column">
+    
+    <li class="nav-item dropdown"  style="font-size: x-large;">
+        <a class="nav-link dropdown-toggle" style="color:red" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          ManageProduct
+        </a>
+        <span class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a  style="color:green;" class="dropdown-item" routerLink="/insertproduct" routerLinkActive="active">AddProduct</a> 
+          <a  style="color:green;" class="dropdown-item" routerLink="/updateproduct" routerLinkActive="active">UpdateProduct</a>
+          <div class="dropdown-divider"></div>
+          <a  style="color: red;"class="dropdown-item" href="deleteproduct">Deleteproduct</a>
+        </span>
+      </li>
+<h1>ProductList</h1>
+<table class="table table-hover">
+    <thead><tr>
+        
+        <td>ProductId</td>
+        <td>ProductName</td>
+        <td>ActualPrice</td>
+        <td>Discount</td>
+        <td>Quantity</td>
+        <td>Description</td>
+        <td>CategoryId</td>
+        <td>ProductImage</td>
+    
+    </tr>
+</thead>
+    <tbody>
+        <tr *ngFor="let pd of productdata">
+            <td>{{pd.ProductId}}</td>
+            <td>{{pd.ProductName}}</td>
+            <td>{{pd.ActualPrice}}</td>
+            <td>{{pd.Discount}}</td>
+            <td>{{pd.Quantity}}</td>
+            <td>{{pd.Description}}</td>
+            <td>{{pd.CategoryId}}</td>
+            <td>{{pd.ProductImage}}</td>
+        </tr>
+    </tbody>
+</table>
